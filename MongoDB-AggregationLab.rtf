@@ -25,4 +25,13 @@
   \{$match: \{price: \{$gt: 3\}\}\}\
 ])\
 \
-6. }
+6. db.menu.aggregate([\
+ \{$match: \{type: "Espresso"\}\}\
+])\
+\
+7. db.menu.aggregate([\
+ \{$sort: \{price: -1\}\},\
+ \{$match: \{type: "Espresso"\}\}\
+])\
+\
+8. }
